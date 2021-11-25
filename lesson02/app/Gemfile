@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+gem 'rubocop'
+gem 'pry'
+
+group :development, :test do
+  gem 'faraday'
+end
+
+# gem 'my_hello', github: 'lostisland/faraday'
+
+group :production, :staging do
+  gem 'puma'
+end
